@@ -104,8 +104,8 @@ class Header extends React.Component {
               { name: 'Our Services', to: 'services' },
               { name: 'Exam Portfolio', to: 'examportfolio' },
               { name: 'Pricing', to: 'pricing' },
-              { name: 'Testimonials', to: 'testimonials' },
               { name: 'Our Clients', to: 'clients' },
+              { name: 'Testimonials', to: 'testimonials' },
               { name: 'FAQs', to: 'faqs' },
               { name: 'Contact', to: 'contact' },
             ].map((item, index) => (
