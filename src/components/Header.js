@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
+import { FaBars } from 'react-icons/fa'; // Importing the hamburger icon
 
 // Styled Components
 const HeaderContainer = styled.header`
@@ -29,16 +30,33 @@ const Logo = styled.h1`
   color: #ffffff;
   font-size: 24px;
   cursor: pointer;
-  font-weight: 700; /* Bold font weight */
+  font-weight: 700;
 `;
 
 const NavLinks = styled.ul`
   list-style: none;
   display: flex;
+
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    background-color: #333333;
+    position: fixed;
+    top: 70px; /* Adjust based on header height */
+    right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+    width: 200px;
+    height: calc(100% - 70px);
+    transition: right 0.3s ease;
+    padding: 20px;
+  }
 `;
 
 const NavLinkItem = styled.li`
   margin-left: 30px;
+
+  @media (max-width: 768px) {
+    margin: 15px 0;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -46,13 +64,13 @@ const NavLink = styled(Link)`
   font-size: 16px;
   cursor: pointer;
   position: relative;
-  font-weight: 500; /* Medium font weight */
+  font-weight: 500;
 
   &:after {
     content: '';
     width: 0%;
     height: 2px;
-    background: #002060; /* Secondary color */
+    background: #002060;
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -68,8 +86,19 @@ const NavLink = styled(Link)`
   }
 `;
 
+const HamburgerIcon = styled.div`
+  display: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 class Header extends React.Component {
-  state = { scrolled: false };
+  state = { scrolled: false, isOpen: false };
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -90,6 +119,15 @@ class Header extends React.Component {
 
   scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.setState({ isOpen: false }); // Close menu when logo is clicked
+  };
+
+  toggleMenu = () => {
+    this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
+  };
+
+  closeMenu = () => {
+    this.setState({ isOpen: false });
   };
 
   render() {
@@ -97,10 +135,12 @@ class Header extends React.Component {
       <HeaderContainer className={this.state.scrolled ? 'scrolled' : ''}>
         <Nav>
           <Logo onClick={this.scrollToTop}>CalC USA</Logo>
-          <NavLinks>
+          <HamburgerIcon onClick={this.toggleMenu}>
+            <FaBars />
+          </HamburgerIcon>
+          <NavLinks isOpen={this.state.isOpen}>
             {[
               { name: 'Home', to: 'home' },
-            //   { name: 'About Us', to: 'about' },
               { name: 'Features', to: 'features' },
               { name: 'Exam Portfolio', to: 'examportfolio' },
               { name: 'Pricing', to: 'pricing' },
@@ -117,6 +157,7 @@ class Header extends React.Component {
                   offset={-70}
                   spy={true}
                   activeClass="active"
+                  onClick={this.closeMenu}
                 >
                   {item.name}
                 </NavLink>
