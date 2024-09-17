@@ -34,6 +34,11 @@ const ExamCard = styled(motion.div)`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 `;
 
 const ExamName = styled.h4`

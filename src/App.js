@@ -24,8 +24,8 @@ function App() {
       <OurServices /> {/* Include OurServices */}
       <ExamPortfolio /> {/* Include ExamPortfolio */}
       <Pricing />
-      <Testimonials />
       <OurClients />
+      <Testimonials />
       <FAQs />
       {/* <Newsletter /> */}
       <ContactForm />
