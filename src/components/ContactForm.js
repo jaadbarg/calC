@@ -56,7 +56,7 @@ const TextArea = styled.textarea`
 `;
 
 const SubmitButton = styled(motion.button)`
-  background-color: #50e3c2;
+  background-color: #002060;
   color: #ffffff;
   padding: 15px 30px;
   border: none;
@@ -68,7 +68,7 @@ const SubmitButton = styled(motion.button)`
   font-weight: 500;
 
   &:hover {
-    background-color: #45d1af;
+    background-color: #003399;
   }
 `;
 

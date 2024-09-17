@@ -6,7 +6,7 @@ const Button = styled.button`
   position: fixed;
   bottom: 50px;
   right: 50px;
-  background-color: #50e3c2;
+  background-color: #002060;
   color: #ffffff;
   border: none;
   padding: 15px;
@@ -16,7 +16,7 @@ const Button = styled.button`
   z-index: 1000;
   
   &:hover {
-    background-color: #45d1af;
+    background-color: #003399;
   }
 `;
 

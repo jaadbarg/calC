@@ -39,7 +39,7 @@ const FeatureItem = styled(motion.div)`
 
 const FeatureIcon = styled.div`
   font-size: 48px;
-  color: #4a90e2;
+  color: #002060;
   margin-bottom: 20px;
 `;
 

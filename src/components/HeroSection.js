@@ -56,7 +56,7 @@ const HeroSubtitle = styled(motion.p)`
 const HeroButton = styled(motion.a)`
   display: inline-block;
   padding: 15px 30px;
-  background-color: #50e3c2;
+  background-color: #002060;
   color: #ffffff;
   font-size: 18px;
   border-radius: 5px;
@@ -65,7 +65,7 @@ const HeroButton = styled(motion.a)`
   z-index: 2; /* Ensure the button appears above the overlay */
 
   &:hover {
-    background-color: #45d1af;
+    background-color: #003399;
   }
 `;
 
@@ -88,7 +88,7 @@ function HeroSection() {
           We Provide Custom-Made Test Questions for US Markets
         </HeroSubtitle>
         <HeroButton
-          href="#contact"
+          href="#features"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

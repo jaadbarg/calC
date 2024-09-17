@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
   transition: background-color 0.3s ease;
 
   &.scrolled {
-    background-color: rgba(74, 144, 226, 0.9); /* Semi-transparent primary color */
+    background-color: #333333; 
   }
 `;
 
@@ -52,7 +52,7 @@ const NavLink = styled(Link)`
     content: '';
     width: 0%;
     height: 2px;
-    background: #50e3c2; /* Secondary color */
+    background: #002060; /* Secondary color */
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -100,8 +100,8 @@ class Header extends React.Component {
           <NavLinks>
             {[
               { name: 'Home', to: 'home' },
-              { name: 'About Us', to: 'about' },
-              { name: 'Our Services', to: 'services' },
+            //   { name: 'About Us', to: 'about' },
+              { name: 'Features', to: 'features' },
               { name: 'Exam Portfolio', to: 'examportfolio' },
               { name: 'Pricing', to: 'pricing' },
               { name: 'Our Clients', to: 'clients' },

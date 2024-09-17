@@ -13,6 +13,7 @@ import FAQs from './components/FAQs';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import Features from './components/Features'
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
       <GlobalStyle />
       <Header />
       <HeroSection />
-      <AboutUs />
-      <OurServices /> {/* Include OurServices */}
+      {/* <AboutUs /> */}
+      <Features /> {/* Include OurServices */}
       <ExamPortfolio /> {/* Include ExamPortfolio */}
       <Pricing />
       <OurClients />

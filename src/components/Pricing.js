@@ -47,7 +47,7 @@ const PlanName = styled.h4`
 
 const Price = styled.p`
   font-size: 32px;
-  color: #4a90e2;
+  color: #002060;
   margin-bottom: 20px;
   font-weight: 700;
 `;
@@ -70,14 +70,14 @@ const PlanFeature = styled.li`
     content: '✔️';
     position: absolute;
     left: 0;
-    color: #50e3c2;
+    color: #002060;
   }
 `;
 
 const SignUpButton = styled.a`
   display: inline-block;
   padding: 10px 20px;
-  background-color: #50e3c2;
+  background-color: #002060;
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
@@ -85,7 +85,7 @@ const SignUpButton = styled.a`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #45d1af;
+    background-color: #003399;
   }
 `;
 
