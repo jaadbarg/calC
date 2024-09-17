@@ -3,16 +3,16 @@ import GlobalStyle from './components/GlobalStyle';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AboutUs from './components/AboutUs';
-import Features from './components/Features';
+import OurServices from './components/OurServices'; // Import OurServices
 import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
+import OurClients from './components/OurClients'; // Import OurClients
+import ExamPortfolio from './components/ExamPortfolio'; // Import ExamPortfolio
 import FAQs from './components/FAQs';
 // import Newsletter from './components/Newsletter';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
-import OurClients from './components/OurClients'; // Import OurClients
-
 
 function App() {
   return (
@@ -21,10 +21,11 @@ function App() {
       <Header />
       <HeroSection />
       <AboutUs />
-      <Features />
+      <OurServices /> {/* Include OurServices */}
+      <ExamPortfolio /> {/* Include ExamPortfolio */}
       <Pricing />
-      <OurClients /> {/* Add OurClients here */}
       <Testimonials />
+      <OurClients />
       <FAQs />
       {/* <Newsletter /> */}
       <ContactForm />

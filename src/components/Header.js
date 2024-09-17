@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
+// Styled Components
 const HeaderContainer = styled.header`
   background-color: transparent;
   position: fixed;
@@ -95,13 +96,16 @@ class Header extends React.Component {
     return (
       <HeaderContainer className={this.state.scrolled ? 'scrolled' : ''}>
         <Nav>
-          <Logo onClick={this.scrollToTop}>CalC</Logo>
+          <Logo onClick={this.scrollToTop}>CalC USA</Logo>
           <NavLinks>
             {[
+              { name: 'Home', to: 'home' },
               { name: 'About Us', to: 'about' },
-              { name: 'Features', to: 'features' },
+              { name: 'Our Services', to: 'services' },
+              { name: 'Exam Portfolio', to: 'examportfolio' },
               { name: 'Pricing', to: 'pricing' },
               { name: 'Testimonials', to: 'testimonials' },
+              { name: 'Our Clients', to: 'clients' },
               { name: 'FAQs', to: 'faqs' },
               { name: 'Contact', to: 'contact' },
             ].map((item, index) => (

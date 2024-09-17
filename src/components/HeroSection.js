@@ -8,7 +8,7 @@ const HeroContainer = styled.section`
   background-size: cover; /* Ensure the image covers the entire section */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent image from repeating */
-  padding: 200px 20px; /* Adjust the padding to suit your design */
+  padding: 280px 20px; /* Adjust the padding to suit your design */
   text-align: center;
   position: relative;
   color: #ffffff;
