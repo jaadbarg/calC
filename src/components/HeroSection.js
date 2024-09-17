@@ -70,33 +70,33 @@ const HeroButton = styled(motion.a)`
 `;
 
 function HeroSection() {
-  return (
-    <HeroContainer id="home">
-      <HeroContent>
-        <HeroTitle
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Welcome to CalC
-        </HeroTitle>
-        <HeroSubtitle
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          We Provide Custom-Made Test Questions for US Markets
-        </HeroSubtitle>
-        <HeroButton
-          href="#features"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Learn More
-        </HeroButton>
-      </HeroContent>
-    </HeroContainer>
-  );
-}
-
-export default HeroSection;
+    return (
+      <HeroContainer id="home">
+        <HeroContent>
+          <HeroTitle
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Elevate Education with Custom Content
+          </HeroTitle>
+          <HeroSubtitle
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            Empowering US educators with bespoke test questions and solutions
+          </HeroSubtitle>
+          <HeroButton
+            href="#about"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Learn More
+          </HeroButton>
+        </HeroContent>
+      </HeroContainer>
+    );
+  }
+  
+  export default HeroSection;
