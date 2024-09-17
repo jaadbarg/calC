@@ -88,7 +88,7 @@ function HeroSection() {
             Empowering US educators with bespoke test questions and solutions
           </HeroSubtitle>
           <HeroButton
-            href="#about"
+            href="#features"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
